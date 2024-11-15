@@ -23,5 +23,5 @@ func on_load_game(data: FeedingPointSavedData):
 	is_occupied = data.is_occupied
 
 
-func reserve(robot: Robot):
+func reserve():
 	is_occupied = true

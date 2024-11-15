@@ -86,7 +86,7 @@ func go_eat(p_feeding_point: FeedingPoint, p_on_completed_eating: Callable):
 	feeding_point = p_feeding_point
 	navigation_agent.target_position = feeding_point.global_position
 
-	feeding_point.reserve(self)
+	feeding_point.reserve()
 
 	on_completed_eating = p_on_completed_eating
 	on_completed_navigation = _start_eating

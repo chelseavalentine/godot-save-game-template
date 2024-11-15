@@ -5,10 +5,6 @@ var save_filename = "user://saved-game.tres"
 var game_load_name_template = "Game load %d"
 
 
-func _ready() -> void:
-	pass
-
-
 func save_game():
 	var saved_game := SavedGame.new()
 
@@ -24,14 +20,12 @@ func save_game():
 
 func _gather_nodes_to_save(saved_game: SavedGame):
 	var nodes_to_persist = get_tree().get_nodes_in_group(SAVE_GROUP_NAME)
-	var root_node: Node = get_tree().root
 
 	for node in nodes_to_persist:
 		if not node.has_method("on_save_game"):
 			print(node.name + " needs 'on_save_game()' implemented")
 
 		var saved_node_data = node.on_save_game()
-		var is_global_node = node.get_parent() == root_node
 
 		if not saved_node_data:
 			continue
