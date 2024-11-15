@@ -2,7 +2,6 @@ extends Node
 
 const SAVE_GROUP_NAME = "Persist"
 var save_filename = "user://saved-game.tres"
-var game_load_name_template = "Game load %d"
 
 
 func save_game():

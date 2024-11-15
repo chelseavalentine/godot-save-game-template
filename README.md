@@ -9,6 +9,10 @@ Whether you have a game that involves player input, or a game that has a lot of 
 
 ### GameSaver.gd
 
+Holds all of the main logic for saving and loading the game data. If you want to plug the game-saving logic into an existing project, you would just copy the data/ directory over to your project and add the safe_resource_loader add-on.
+
+This project also uses the GameSaver and ObjectFinder as global classes.
+
 ### Dynamic/moving game node example: Robot.gd
 
 Dynamic nodes are game nodes that are dynamically added to the game at runtime.
